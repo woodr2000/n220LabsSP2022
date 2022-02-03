@@ -18,8 +18,6 @@ function draw() {
     //add a translate
     translate(100,100);
     //draw a circle
-    console.log("x="+res.x);
-    console.log("y="+res.y);
     circle(res.x, res.y,10);
 }
 
