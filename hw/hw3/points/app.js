@@ -4,7 +4,7 @@
 // polar points application
 
 //application variables
-let x,y,res;
+let x, y, res;
 
 //setup of the application
 function setup() {
@@ -14,11 +14,13 @@ function setup() {
 
 function draw() {
     //give res the result of the new function
-    res = polarPoint(20);
+    res = polarPoint(60);
     //add a translate
     translate(100,100);
     //draw a circle
-    circle(res.x,res.y,10);
+    console.log("x="+res.x);
+    console.log("y="+res.y);
+    circle(res.x, res.y,10);
 }
 
 //create a new function polarPoint()
@@ -26,7 +28,7 @@ function polarPoint(r){//give the function one argument, r
     //set the x value using sin
     x = r * Math.sin(mouseX);
     //set the y value using cos
-    y = Math.cos(mouseX);
+    y = r * Math.cos(mouseX);
 
     //return createVector(x,y)
     return createVector(x,y);
