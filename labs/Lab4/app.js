@@ -21,7 +21,7 @@ function draw() {
   //if the length is more than 120 make it red
   if(point > 120){ 
     stroke("#FF0000");
-  } else if (point < 120) { //if the length is shorter than that, then make it black
+  } else { //if the length is shorter than that, then make it black
     stroke("#000000");
   }
   
