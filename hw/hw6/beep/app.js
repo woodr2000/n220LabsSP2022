@@ -5,9 +5,7 @@ Beep Bop
 */
 
 //start from zero and keep looping until 25
-let x = 0;
-while(x < 26){
-    //define a text variable to store element
+for(x=0;x<26;x++){
     let text = document.getElementById("beepbop");
 
     //create an exception to exclude 0
@@ -22,6 +20,4 @@ while(x < 26){
     } else { // if they do not meet previous criteria, just display the number
         text.innerHTML += x + " ";
     }
-
-    x++;
 }
