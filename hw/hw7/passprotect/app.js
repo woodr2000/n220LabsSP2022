@@ -1,3 +1,8 @@
+//Robert Wood
+//3/23/22
+//N220
+//Password Protected javascript
+
 let username = document.getElementById("username");
 let pass = document.getElementById("password");
 let txtResult = document.getElementById("txtResult");
