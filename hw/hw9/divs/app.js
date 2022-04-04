@@ -21,19 +21,14 @@ for(x=0; x<3; x++){
     newDiv = document.createElement("div");
     //give it an ID
     newDiv.id = "test"+x;        
-        
+    
     //put text into it so the color shows up on the page
     newDiv.innerHTML = "this is a test";
-
-    //assign an object to a variable
-    object = objects[x];
-    //then get those values from the object, which will put them into an array I can use
-    object = Object.values(object);
         
-    //use the array of information to style the div
-    newDiv.style.color = object[0];
-    newDiv.style.height = object[1]+"px";
-    newDiv.style.width = object[2]+"px";
+    //style the div using the objects in the array
+    newDiv.style.color = objects[x].color;
+    newDiv.style.height = objects[x].height+"px";
+    newDiv.style.width = objects[x].width+"px";
 
     //add the completed div to the body of the page
     document.body.appendChild(newDiv);
