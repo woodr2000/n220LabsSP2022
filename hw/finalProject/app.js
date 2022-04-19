@@ -68,7 +68,6 @@ function checkWord(event){
     //if the letter is not in word, then add to the hanged score
     if(!(word.includes(letter))){
         hangedScore++;
-        console.log("Add to the hanged man picture");
         document.getElementById("hanged-man").src = "img/strike"+hangedScore+".PNG"
     }
 
@@ -92,7 +91,6 @@ function checkWord(event){
         document.getElementById("result").innerHTML = "WINNER!"
     } 
 
-
     //if the user loses
     else if (hangedScore == 6){
         //disable all buttons
@@ -102,6 +100,11 @@ function checkWord(event){
         }
         //display TRY AGAIN to the user
         document.getElementById("result").innerHTML = "TRY AGAIN!"
+        
+        //reveal the word to the user
+        for(x=0; x<word.length; x++){                
+            document.getElementById("letter"+x).innerHTML = word[x]+" ";
+        }
     }
 }
 
