@@ -11,7 +11,7 @@ let alpha = ["q","w","e","r","t","y","u","i","o","p",
              "z","x","c","v","b","n","m"];
 
 //random integer generator
-let num = Math.floor(Math.random() * 6);
+let num = Math.floor(Math.random() * 10);
 
 let word = wordBank[num];
 let keyboard = document.getElementById("keyboard");
@@ -100,7 +100,7 @@ function checkWord(event){
         }
         //display TRY AGAIN to the user
         document.getElementById("result").innerHTML = "TRY AGAIN!"
-        
+
         //reveal the word to the user
         for(x=0; x<word.length; x++){                
             document.getElementById("letter"+x).innerHTML = word[x]+" ";
